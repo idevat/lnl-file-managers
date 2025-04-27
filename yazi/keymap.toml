@@ -7,6 +7,11 @@ prepend_keymap = [
 	{on = "<Delete>", run = "remove --permanently", desc = "Permanently delete selected files"},
   {on = "D", run = "unyank", desc = "Cancel the yank status"},
   {on = "d", run = "yank --cut", desc = "Yank selected files (cut)"},
+
+  {on = [ "m" ], run = "plugin bookmarks save", desc = "Save current position as a bookmark"},
+  {on = [ "'" ], run = "plugin bookmarks jump", desc = "Jump to a bookmark"},
+  {on = [ "b", "d" ], run = "plugin bookmarks delete", desc = "Delete a bookmark"},
+  {on = [ "b", "D" ], run = "plugin bookmarks delete_all", desc = "Delete all bookmarks"}
 ]
 append_keymap = [
   {on = ["g", "r"], run = 'shell -- ya emit cd "$(git rev-parse --show-toplevel)"', desc = "Goto git root"},
