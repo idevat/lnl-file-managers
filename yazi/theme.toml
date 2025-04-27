@@ -1,0 +1,7 @@
+[which]
+cols = 3
+mask = {bg = "#eceff1"}
+cand = {fg = "#bf360c"}
+rest = {fg = "#90a4ae"}
+desc = {fg = "#1565c0"}
+separator = "  "
