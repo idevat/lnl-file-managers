@@ -1,0 +1,16 @@
+[manager]
+
+prepend_keymap = [
+  {on = "Q", run = "quit", desc = "Quit the process"},
+	{on = "q", run = "quit --no-cwd-file", desc = "Quit the process without outputting cwd-file"},
+
+	{on = "<Delete>", run = "remove --permanently", desc = "Permanently delete selected files"},
+  {on = "D", run = "unyank", desc = "Cancel the yank status"},
+  {on = "d", run = "yank --cut", desc = "Yank selected files (cut)"},
+]
+append_keymap = [
+  {on = ["g", "r"], run = 'shell -- ya emit cd "$(git rev-parse --show-toplevel)"', desc = "Goto git root"},
+  {on = [ "g", "p", "u" ], run = "cd ~/projects/pcs-web-ui", desc = "Goto ~ui"},
+  {on = [ "g", "p", "p" ], run = "cd ~/projects/pcs", desc = "Goto ~pcs"},
+  {on = [ "g", "p", "l" ], run = "cd ~/projects/ha_cluster/", desc = "Goto ~lsr"},
+]
