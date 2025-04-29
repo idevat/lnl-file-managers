@@ -2,6 +2,16 @@
 ratio = [0, 1, 1]
 show_hidden = true
 
+[opener]
+vlc = [
+  {run = 'vlc "$@"', block = true, for = "unix"}
+]
+
+[open]
+prepend_rules = [
+  {mime = "{audio,video}/*", use = ["vlc", "play", "reveal" ]},
+]
+
 [plugin]
 
 prepend_preloaders = [
