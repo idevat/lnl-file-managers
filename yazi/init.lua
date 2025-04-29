@@ -11,3 +11,5 @@ require("bookmarks"):setup {
   persist = "all", -- vim: only in upper case (A-Z) are persistent
   custom_desc_input = false,
 }
+
+require("folder-rules"):setup()
